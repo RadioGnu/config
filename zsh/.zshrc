@@ -5,9 +5,16 @@ neofetch
 alias v='nvim'
 alias grep='grep --color'
 alias _='sudo'
-alias ll='exa -lb --icons --git'
-alias la='exa -lab --icons --git'
+alias ll='exa -l --icons --git --group-directories-first'
+alias la='exa -la --icons --git --group-directories-first'
+alias lt='exa -aT --icons --git --group-directories-first'
 alias reload='source ~/.zshrc'
+alias ne='emacs -nw'
+
+# confirm before overwriting something
+alias cp="cp -i"
+alias mv='mv -i'
+alias rm='rm -i'
 
 #Prompt
 autoload -Uz compinit
