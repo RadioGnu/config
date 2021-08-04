@@ -21,7 +21,8 @@ autoload -Uz compinit
 zstyle ':completion:*' menu select
 compinit
 
-PROMPT='%F{red}%*%F{green} %?%F{blue} %~%F{magenta} %#%f ' 
+PROMPT='%F{green}%? %F{blue}%~ %F{magenta}%#%f ' 
+RPROMPT='%K{232}%F{121}%*' 
 
 export EDITOR="/usr/bin/nvim"
 
