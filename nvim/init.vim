@@ -46,7 +46,15 @@ set noshowmode
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Remap Keys
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-:imap ii <Esc>
+:inoremap ii <Esc>
+:nnoremap Y y$
+:nnoremap J mzJ`z
+:inoremap . .<C-g>u
+:inoremap , ,<C-g>u
+:vnoremap J :m '>+1<CR>gv=gv
+:vnoremap K :m '<-2<CR>gv=gv
+:vnoremap H <gv
+:vnoremap L >gv
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Mouse
