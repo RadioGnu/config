@@ -46,7 +46,8 @@ set noshowmode
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Remap Keys
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-:inoremap ii <Esc>
+:map ii <Esc>
+:map! ii <Esc>
 :nnoremap Y y$
 :nnoremap J mzJ`z
 :inoremap . .<C-g>u
