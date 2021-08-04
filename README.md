@@ -1,7 +1,8 @@
-#Pol's configuration
+# RadioGnu's configuration
 ## Installation
 ```sh
 #Install all packages in utilities
+xargs (eo)pkg it < utilities
 
 #base16 shell
 git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
