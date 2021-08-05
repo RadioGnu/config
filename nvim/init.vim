@@ -6,8 +6,14 @@ let mapleader = "\<Space>"
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.config/nvim/plugged')
 
-Plug 'chriskempson/base16-vim'
-Plug 'itchyny/lightline.vim'
+    Plug 'chriskempson/base16-vim'      "Themes
+    Plug 'ayu-theme/ayu-vim'
+    Plug 'itchyny/lightline.vim'        "Status bar
+    Plug 'luochen1990/rainbow'          "Parantheses pop out
+    "Plug 'unblevable/quick-scope'       "Underline chars when pressing f
+    Plug 'mcchrish/nnn.vim'             "File manager
+    Plug 'itchyny/vim-cursorword'       "Underline word under cursor
+    Plug 'vim-python/python-syntax'
 
 call plug#end()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -20,21 +26,24 @@ set nobackup                    " No backup files
 set t_Co=256                    " Set if term supports 256 colors.
 set number relativenumber       " Display line numbers
 set clipboard=unnamedplus       " Copy/paste between vim and other programs.
+set showmatch
+set cursorline
+set scrolloff=1
 syntax enable
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Theme
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set t_Co=256
-let base16colorspace=256
-"colorscheme 
+set termguicolors
+let ayucolor="dark"
+colorscheme ayu
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Status Line
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " The lightline.vim theme
 let g:lightline = {
-      \ 'colorscheme': 'darcula',
+      \ 'colorscheme': 'one'
       \ }
 
 " Always show statusline
@@ -46,17 +55,30 @@ set noshowmode
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Remap Keys
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Escape is hard to reach
 :vmap ii <Esc>
 :omap ii <Esc>
 :map! ii <Esc>
+
 :nnoremap Y y$
 :nnoremap J mzJ`z
+
+"Undo up to . or other characters
 :inoremap . .<C-g>u
 :inoremap , ,<C-g>u
+:inoremap ; ;<C-g>u
+
+"Moving selection in visual mode
 :vnoremap J :m '>+1<CR>gv=gv
 :vnoremap K :m '<-2<CR>gv=gv
 :vnoremap H <gv
 :vnoremap L >gv
+
+"File Manager
+nnoremap <leader>f ::NnnPicker %:p:h<CR>
+
+"kill current search
+nnoremap <leader>s :nohlsearch<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Mouse
@@ -81,6 +103,11 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+" Splitting (A-HJKL to resizee)
+noremap <A-h> :vertical resize -5<CR>
+noremap <A-l> :vertical resize +5<CR>
+noremap <A-j> :resize -5<CR>
+noremap <A-k> :resize +5<CR>
 
 " Removes pipes | that act as seperators on splits
 set fillchars+=vert:\
@@ -88,6 +115,8 @@ set fillchars+=vert:\
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Other settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:python_highlight_all = 1
+
 set guioptions-=m  "remove menu bar
 set guioptions-=T  "remove toolbar
 set guioptions-=r  "remove right-hand scroll bar

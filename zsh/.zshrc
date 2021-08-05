@@ -19,16 +19,23 @@ alias rm='rm -i'
 #Prompt
 autoload -Uz compinit
 zstyle ':completion:*' menu select
+zmodload -i zsh/complist
 compinit
+_comp_options+=(globdots)       #Include hidden files
 
-PROMPT='%F{green}%? %F{blue}%~ %F{magenta}%#%f %k' 
-RPROMPT='%F{121}%K{232}%*' 
+PROMPT='[%B%(?.%F{green}√.%F{red}?%?)%f %b%F{51}%n %B%F{magenta}%~%f] %F{40}> %b%f' 
+RPROMPT='[%B%F{red}%*%f%b]' 
 
 export EDITOR="/usr/bin/nvim"
 
 # vi mode
 bindkey -v
 export KEYTIMEOUT=1
+# Use vim keys in tab complete menu:
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'k' vi-up-line-or-history
+bindkey -M menuselect 'l' vi-forward-char
+bindkey -M menuselect 'j' vi-down-line-or-history
 
 # Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/"
