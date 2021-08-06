@@ -6,8 +6,7 @@ let mapleader = "\<Space>"
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.config/nvim/plugged')
 
-    Plug 'chriskempson/base16-vim'      "Themes
-    Plug 'ayu-theme/ayu-vim'
+    Plug 'CantoroMC/ayu-nvim'
     Plug 'itchyny/lightline.vim'        "Status bar
     Plug 'luochen1990/rainbow'          "Parantheses pop out
     "Plug 'unblevable/quick-scope'       "Underline chars when pressing f
@@ -23,18 +22,18 @@ set incsearch                   " Incremental search
 set hidden                      " Needed to keep multiple buffers open
 set noswapfile                  " No swap
 set nobackup                    " No backup files
-set t_Co=256                    " Set if term supports 256 colors.
 set number relativenumber       " Display line numbers
 set clipboard=unnamedplus       " Copy/paste between vim and other programs.
 set showmatch
 set cursorline
+set cursorcolumn
 set scrolloff=1
 syntax enable
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Theme
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set termguicolors
+set termguicolors               " Set if term supports true colors.
 let ayucolor="dark"
 colorscheme ayu
 

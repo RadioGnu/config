@@ -1,5 +1,5 @@
-#Flex
-neofetch
+#Colorscript
+colorscript -r
 
 #Aliases
 alias v='nvim'
@@ -27,6 +27,9 @@ PROMPT='[%B%(?.%F{green}√.%F{red}?%?)%f %b%F{51}%n %B%F{magenta}%~%f] %F{40}> 
 RPROMPT='[%B%F{red}%*%f%b]' 
 
 export EDITOR="/usr/bin/nvim"
+export NNN_OPTS="dE"
+export NNN_NNN_BMS="d:$HOME/Documents;D:$HOME/Downloads;m:$HOME/mc_server/"
+export NNN_COLORS='1234'
 
 # vi mode
 bindkey -v
