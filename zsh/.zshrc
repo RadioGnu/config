@@ -12,17 +12,28 @@ alias reload='source ~/.zshrc'
 alias ne='emacs -nw'
 
 # confirm before overwriting something
-alias cp="cp -i"
-alias mv='mv -i'
-alias rm='rm -i'
+alias cp="cp -vi"
+alias mv='mv -vi'
+alias rm='rm -vI'
 
-#Prompt
+# History in cache directory
+HISTSIZE=10000000
+SAVEHIST=10000000
+HISTFILE=~/.cache/zsh/history
+
+setopt HIST_IGNORE_ALL_DUPS  # do not put duplicated command into history list
+setopt HIST_SAVE_NO_DUPS  # do not save duplicated command
+setopt HIST_REDUCE_BLANKS  # remove unnecessary blanks
+setopt EXTENDED_HISTORY #record command start time
+
+#Completion settings
 autoload -Uz compinit
 zstyle ':completion:*' menu select
 zmodload -i zsh/complist
 compinit
 _comp_options+=(globdots)       #Include hidden files
 
+#Prompt
 PROMPT='[%B%(?.%F{green}√.%F{red}?%?)%f %b%F{51}%n %B%F{magenta}%~%f] %F{40}> %b%f' 
 RPROMPT='[%B%F{red}%*%f%b]' 
 
