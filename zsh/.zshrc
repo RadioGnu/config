@@ -65,5 +65,8 @@ autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 
 # Load zsh-syntax-highlighting; should be last.
+# Top is for desktop,bottom for termux.
+# Probably a way to do an if condition for OS.
 export SYNTAX_HIGHLIGHT=/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# export SYNTAX_HIGHLIGHT=~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 [ -f $SYNTAX_HIGHLIGHT ] && source $SYNTAX_HIGHLIGHT
