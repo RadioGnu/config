@@ -11,7 +11,18 @@ alias lt='exa -aT --icons --git --group-directories-first'
 alias reload='source ~/.zshrc'
 alias ne='emacs -nw'
 
-# confirm before overwriting something
+## Git
+alias ga='git add'
+alias gcm='git commit -m'
+alias gd='git diff'
+alias gc='git checkout'
+alias gcb='git checkout -b'
+alias glg='git log --graph --abbrev-commit'
+alias gldog='git log --all --decorate --oneline --graph'
+alias gps='git push'
+alias gst='git status'
+
+## confirm before overwriting something
 alias cp="cp -vi"
 alias mv='mv -vi'
 alias rm='rm -vI'
