@@ -1,4 +1,3 @@
-set nocompatible
 let mapleader = "\<Space>"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -25,6 +24,7 @@ set nobackup                    " No backup files
 set number relativenumber       " Display line numbers
 set clipboard=unnamedplus       " Copy/paste between vim and other programs.
 set showmatch
+set wildmenu
 set cursorline
 set cursorcolumn
 set scrolloff=1
