@@ -3,9 +3,9 @@ let mapleader = "\<Space>"
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugins
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-call plug#begin('~/.config/nvim/plugged')
+call plug#begin('~/.vim/plugged')
 
-    Plug 'CantoroMC/ayu-nvim'           "Theme
+    Plug 'joshdick/onedark.vim'
     Plug 'itchyny/lightline.vim'        "Status bar
     Plug 'luochen1990/rainbow'          "Parantheses pop out
     "Plug 'unblevable/quick-scope'       "Underline chars when pressing f
@@ -23,19 +23,21 @@ set noswapfile                  " No swap
 set nobackup                    " No backup files
 set number relativenumber       " Display line numbers
 set clipboard=unnamedplus       " Copy/paste between vim and other programs.
-set showmatch
 set wildmenu
+set showmatch
 set cursorline
 set cursorcolumn
 set scrolloff=1
-syntax enable
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Theme
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set termguicolors               " Set if term supports true colors.
-let ayucolor="dark"
-colorscheme ayu
+if (has("termguicolors"))
+    set termguicolors               " Set if term supports true colors.
+endif
+
+syntax enable
+colorscheme onedark
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Status Line
@@ -115,4 +117,3 @@ set fillchars+=vert:\
 " => Other settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:python_highlight_all = 1
-
