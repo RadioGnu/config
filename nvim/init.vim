@@ -72,6 +72,9 @@ set noshowmode
 :vnoremap H <gv
 :vnoremap L >gv
 
+"Quick save
+nnoremap <leader>w :w<CR>
+
 "File Manager
 nnoremap <leader>f ::NnnPicker %:p:h<CR>
 
