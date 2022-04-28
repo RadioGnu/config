@@ -12,6 +12,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'mcchrish/nnn.vim'             "File manager
     Plug 'itchyny/vim-cursorword'       "Underline word under cursor
     Plug 'vim-python/python-syntax'
+    Plug 'tpope/vim-fugitive'           "Git for vim
 
 call plug#end()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
