@@ -76,6 +76,13 @@ set noshowmode
 :vnoremap H <gv
 :vnoremap L >gv
 
+
+"Quick save
+nnoremap <leader>w :w<CR>
+
+"Go to normal mode in terminal
+:tnoremap <Esc> <C-\><C-n>
+
 "File Manager
 nnoremap <leader>f ::NnnPicker %:p:h<CR>
 
