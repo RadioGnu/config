@@ -12,6 +12,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'mcchrish/nnn.vim'             "File manager
     Plug 'itchyny/vim-cursorword'       "Underline word under cursor
     Plug 'vim-python/python-syntax'
+    Plug 'tpope/vim-fugitive'           "Git for vim
 
 call plug#end()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -72,6 +73,9 @@ set noshowmode
 :vnoremap K :m '<-2<CR>gv=gv
 :vnoremap H <gv
 :vnoremap L >gv
+
+"Quick save
+nnoremap <leader>w :w<CR>
 
 "File Manager
 nnoremap <leader>f ::NnnPicker %:p:h<CR>
