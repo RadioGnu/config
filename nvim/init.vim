@@ -74,7 +74,7 @@ set noshowmode
 :vnoremap L >gv
 
 "Go to normal mode in terminal
-:tnoremap <leader><Esc> <C-\><C-n>
+:tnoremap <Esc><Esc> <C-\><C-n>
 
 "Quick save
 nnoremap <leader>w :w<CR>
