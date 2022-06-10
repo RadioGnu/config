@@ -45,22 +45,14 @@ compinit
 _comp_options+=(globdots)       #Include hidden files
 
 #Prompt
-PROMPT='[%B%(?.%F{green}√.%F{red}?%?)%f %b%F{51}%n %B%F{magenta}%~%f] %F{40}> %b%f' 
+NEWLINE=$'\n'   #Newline before the prompt
+PROMPT="[%B%(?.%F{green}√.%F{red}?%?)%f %b%F{51}%n%f@%F{yellow}%m %B%F{magenta}%~%f] ${NEWLINE}%F{40}> %b%f"
 RPROMPT='[%B%F{red}%*%f%b]' 
 
 export EDITOR="/usr/bin/nvim"
 export NNN_OPTS="dE"
 export NNN_NNN_BMS="d:$HOME/Documents;D:$HOME/Downloads;m:$HOME/mc_server/"
 export NNN_COLORS='1234'
-
-# vi mode
-bindkey -v
-export KEYTIMEOUT=1
-# Use vim keys in tab complete menu:
-bindkey -M menuselect 'h' vi-backward-char
-bindkey -M menuselect 'k' vi-up-line-or-history
-bindkey -M menuselect 'l' vi-forward-char
-bindkey -M menuselect 'j' vi-down-line-or-history
 
 # Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/"
