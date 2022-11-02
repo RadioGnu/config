@@ -8,11 +8,11 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'CantoroMC/ayu-nvim'           "Theme
     Plug 'itchyny/lightline.vim'        "Status bar
     Plug 'luochen1990/rainbow'          "Parantheses pop out
-    "Plug 'unblevable/quick-scope'       "Underline chars when pressing f
     Plug 'mcchrish/nnn.vim'             "File manager
     Plug 'itchyny/vim-cursorword'       "Underline word under cursor
     Plug 'vim-python/python-syntax'
     Plug 'tpope/vim-fugitive'           "Git for vim
+    Plug 'vimwiki/vimwiki'
 
 call plug#end()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -27,7 +27,7 @@ set clipboard=unnamedplus       " Copy/paste between vim and other programs.
 set showmatch
 set cursorline
 set cursorcolumn
-set scrolloff=1
+set scrolloff=5
 syntax enable
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -76,9 +76,6 @@ set noshowmode
 "Go to normal mode in terminal
 :tnoremap <Esc><Esc> <C-\><C-n>
 
-"Quick save
-nnoremap <leader>w :w<CR>
-
 "File Manager
 nnoremap <leader>f ::NnnPicker %:p:h<CR>
 
@@ -121,4 +118,5 @@ set fillchars+=vert:\
 " => Other settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:python_highlight_all = 1
+let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
 
