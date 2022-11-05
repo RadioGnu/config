@@ -13,6 +13,8 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'vim-python/python-syntax'
     Plug 'tpope/vim-fugitive'           "Git for vim
     Plug 'vimwiki/vimwiki'
+    Plug 'godlygeek/tabular'
+    Plug 'preservim/vim-markdown'
 
 call plug#end()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -120,4 +122,5 @@ set fillchars+=vert:\
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:python_highlight_all = 1
 let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
+let g:vim_markdown_math = 1
 
