@@ -8,11 +8,13 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'CantoroMC/ayu-nvim'           "Theme
     Plug 'itchyny/lightline.vim'        "Status bar
     Plug 'luochen1990/rainbow'          "Parantheses pop out
-    "Plug 'unblevable/quick-scope'       "Underline chars when pressing f
     Plug 'mcchrish/nnn.vim'             "File manager
     Plug 'itchyny/vim-cursorword'       "Underline word under cursor
     Plug 'vim-python/python-syntax'
     Plug 'tpope/vim-fugitive'           "Git for vim
+    Plug 'vimwiki/vimwiki'
+    Plug 'godlygeek/tabular'
+    Plug 'preservim/vim-markdown'
 
 call plug#end()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -29,6 +31,7 @@ set wildmenu
 set cursorline
 set cursorcolumn
 set scrolloff=1
+set sidescroll=5 "if for some reason wrap is off
 syntax enable
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -74,8 +77,8 @@ set noshowmode
 :vnoremap H <gv
 :vnoremap L >gv
 
-"Quick save
-nnoremap <leader>w :w<CR>
+"Go to normal mode in terminal
+:tnoremap <Esc><Esc> <C-\><C-n>
 
 "File Manager
 nnoremap <leader>f ::NnnPicker %:p:h<CR>
@@ -119,4 +122,6 @@ set fillchars+=vert:\
 " => Other settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:python_highlight_all = 1
+let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
+let g:vim_markdown_math = 1
 
