@@ -7,14 +7,12 @@ call plug#begin('~/.config/nvim/plugged')
 
     Plug 'CantoroMC/ayu-nvim'           "Theme
     Plug 'itchyny/lightline.vim'        "Status bar
-    Plug 'luochen1990/rainbow'          "Parantheses pop out
-    Plug 'mcchrish/nnn.vim'             "File manager
+    Plug 'luochen1990/rainbow'          "Parentheses pop out
     Plug 'itchyny/vim-cursorword'       "Underline word under cursor
-    Plug 'vim-python/python-syntax'
+    Plug 'vim-python/python-syntax'     "Python syntax
     Plug 'tpope/vim-fugitive'           "Git for vim
-    Plug 'vimwiki/vimwiki'
-    Plug 'godlygeek/tabular'
-    Plug 'preservim/vim-markdown'
+    Plug 'vimwiki/vimwiki'              "Vimwiki - notetaking
+    Plug 'preservim/vim-markdown'       "Markdown help plugin
 
 call plug#end()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -58,9 +56,9 @@ set noshowmode
 " => Remap Keys
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Escape is hard to reach
-:vmap ii <Esc>
-:omap ii <Esc>
-:map! ii <Esc>
+:vmap jk <Esc>
+:omap jk <Esc>
+:map! jk <Esc>
 
 :nnoremap Y y$
 :nnoremap J mzJ`z
@@ -78,9 +76,6 @@ set noshowmode
 
 "Go to normal mode in terminal
 :tnoremap <Esc><Esc> <C-\><C-n>
-
-"File Manager
-nnoremap <leader>f ::NnnPicker %:p:h<CR>
 
 "kill current search
 nnoremap <leader>s :nohlsearch<CR>
