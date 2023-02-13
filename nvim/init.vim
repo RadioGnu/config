@@ -29,7 +29,9 @@ set cursorline
 set cursorcolumn
 set scrolloff=1
 set sidescroll=5 "if for some reason wrap is off
-syntax enable
+
+"When autocompleting, complete to the greatest common match
+set completeopt=longest,menuone
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Theme
@@ -37,6 +39,7 @@ syntax enable
 set termguicolors               " Set if term supports true colors.
 let ayucolor="dark"
 colorscheme ayu
+hi Comment guifg='LightMagenta'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Status Line
