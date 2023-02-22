@@ -40,7 +40,7 @@ set completeopt=longest,menuone
 set termguicolors               " Set if term supports true colors.
 let ayucolor="dark"
 colorscheme ayu
-hi Comment guifg='LightMagenta'
+highlight Comment guifg='LightMagenta'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Status Line
@@ -77,6 +77,9 @@ set noshowmode
 :vnoremap K :m '<-2<CR>gv=gv
 :vnoremap H <gv
 :vnoremap L >gv
+
+"Quick save
+nnoremap <leader>w :w<CR>
 
 "Go to normal mode in terminal
 :tnoremap <Esc><Esc> <C-\><C-n>
