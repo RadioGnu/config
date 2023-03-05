@@ -11,7 +11,6 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'itchyny/vim-cursorword'       "Underline word under cursor
     Plug 'vim-python/python-syntax'     "Python syntax
     Plug 'tpope/vim-fugitive'           "Git for vim
-    Plug 'vimwiki/vimwiki'              "Vimwiki - notetaking
     Plug 'preservim/vim-markdown'       "Markdown help plugin
 
 call plug#end()
@@ -123,6 +122,5 @@ set fillchars+=vert:\
 " => Other settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:python_highlight_all = 1
-let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
 let g:vim_markdown_math = 1
 
