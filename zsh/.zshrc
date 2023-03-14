@@ -1,6 +1,3 @@
-#Colorscript
-colorscript -r
-
 #Aliases
 alias v='nvim'
 alias _='sudo'
@@ -59,11 +56,12 @@ autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 
 platform=$(uname -o)
-echo $platform
 # Load zsh-syntax-highlighting; should be last.
-if [[$platform == 'Gnu/Linux']]; then
+if [ $platform == 'Gnu/Linux' ]; then
     export SYNTAX_HIGHLIGHT=/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-elif [[$platform == 'Android']]; then
-    export SYNTAX_HIGHLIGHT=~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    colorscript -r
+elif [ $platform == 'Android' ]; then
+    export SYNTAX_HIGHLIGHT=~/apps/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
 [ -f $SYNTAX_HIGHLIGHT ] && source $SYNTAX_HIGHLIGHT
+
