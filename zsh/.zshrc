@@ -3,13 +3,12 @@ colorscript -r
 
 #Aliases
 alias v='nvim'
-alias grep='grep --color'
 alias _='sudo'
-alias ll='exa -l --icons --git --group-directories-first'
-alias la='exa -la --icons --git --group-directories-first'
-alias lt='exa -aT --icons --git --group-directories-first'
+alias ll='exa -l --icons --group-directories-first'
+alias la='exa -la --icons --group-directories-first'
+##Tree format, remove .git directories
+alias lt='exa -aT -I.git --icons --group-directories-first'
 alias reload='source ~/.zshrc'
-alias ne='emacs -nw'
 
 ## Git
 alias ga='git add'
@@ -21,6 +20,7 @@ alias glg='git log --graph --abbrev-commit'
 alias gldog='git log --all --decorate --oneline --graph'
 alias gps='git push'
 alias gst='git status'
+alias gpl='git pull --rebase'
 
 ## confirm before overwriting something
 alias cp="cp -vi"
@@ -54,22 +54,16 @@ export NNN_OPTS="dE"
 export NNN_NNN_BMS="d:$HOME/Documents;D:$HOME/Downloads;m:$HOME/mc_server/"
 export NNN_COLORS='1234'
 
-# Base16 Shell
-BASE16_SHELL="$HOME/.config/base16-shell/"
-[ -n "$PS1" ] && \
-    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
-        eval "$("$BASE16_SHELL/profile_helper.sh")"
-
-#fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 # Edit line in vim with ctrl-e:
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 
+platform=$(uname -o)
+echo $platform
 # Load zsh-syntax-highlighting; should be last.
-# Top is for desktop,bottom for termux.
-# Probably a way to do an if condition for OS.
-export SYNTAX_HIGHLIGHT=/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-# export SYNTAX_HIGHLIGHT=~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+if [[$platform == 'Gnu/Linux']]; then
+    export SYNTAX_HIGHLIGHT=/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+elif [[$platform == 'Android']]; then
+    export SYNTAX_HIGHLIGHT=~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
 [ -f $SYNTAX_HIGHLIGHT ] && source $SYNTAX_HIGHLIGHT
