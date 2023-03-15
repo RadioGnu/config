@@ -57,10 +57,10 @@ bindkey '^e' edit-command-line
 
 platform=$(uname -o)
 # Load zsh-syntax-highlighting; should be last.
-if [ $platform == 'Gnu/Linux' ]; then
+if [ $platform = 'GNU/Linux' ]; then
     export SYNTAX_HIGHLIGHT=/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
     colorscript -r
-elif [ $platform == 'Android' ]; then
+elif [ $platform = 'Android' ]; then
     export SYNTAX_HIGHLIGHT=~/apps/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
 [ -f $SYNTAX_HIGHLIGHT ] && source $SYNTAX_HIGHLIGHT
