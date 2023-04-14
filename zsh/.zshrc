@@ -1,4 +1,8 @@
 #Aliases
+
+##Config
+alias config='/usr/bin/git --git-dir=$HOME/.cfg --work-tree=$HOME'
+##General
 alias v='nvim'
 alias _='sudo'
 alias ll='exa -l --icons --group-directories-first'
@@ -47,10 +51,6 @@ PROMPT="[%B%(?.%F{green}√.%F{red}?%?)%f %b%F{51}%n%f@%F{yellow}%m %B%F{magenta
 RPROMPT='[%B%F{red}%*%f%b]' 
 
 export EDITOR="/usr/bin/nvim"
-export NNN_OPTS="dE"
-export NNN_NNN_BMS="d:$HOME/Documents;D:$HOME/Downloads;m:$HOME/mc_server/"
-export NNN_COLORS='1234'
-
 # Edit line in vim with ctrl-e:
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
