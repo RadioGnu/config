@@ -51,9 +51,7 @@ PROMPT="[%B%(?.%F{green}√.%F{red}?%?)%f %b%F{51}%n%f@%F{yellow}%m %B%F{magenta
 RPROMPT='[%B%F{red}%*%f%b]' 
 
 export EDITOR="/usr/bin/nvim"
-# Edit line in vim with ctrl-e:
-autoload edit-command-line; zle -N edit-command-line
-bindkey '^e' edit-command-line
+bindkey -v
 
 platform=$(uname -o)
 # Load zsh-syntax-highlighting; should be last.
