@@ -21,7 +21,7 @@ mozc
 neovim
 pandoc
 qtcreator
-pulseaudio
+pipewire
 steam
 sudo
 thunderbird
