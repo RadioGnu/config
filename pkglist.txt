@@ -1,6 +1,7 @@
 android-file-transfer
 android-udev
 base
+curl
 dhcpcd
 discord
 efibootmgr
@@ -12,6 +13,7 @@ git
 grep
 grub
 htop
+iwd
 keepassxc
 libreoffice
 linux
@@ -28,4 +30,6 @@ thunderbird
 vlc
 which
 wget
+xfce4
 xorg
+zsh
