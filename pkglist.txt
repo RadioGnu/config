@@ -7,6 +7,8 @@ discord
 efibootmgr
 exa
 fcitx5
+fcitx5-gtk
+fcitx5-mozc
 firefox
 gawk
 gimp
@@ -14,6 +16,8 @@ git
 grep
 grub
 htop
+hunspell-en_gb
+hunspell-fr
 iwd
 keepassxc
 libreoffice-fresh
@@ -21,13 +25,13 @@ linux
 man-db
 mpv
 musescore
-mozc
 neovim
 pandoc
 pipewire
 redshift
 steam
 sudo
+sof-firmware
 tar
 thunderbird
 which
