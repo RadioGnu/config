@@ -56,7 +56,7 @@ bindkey -v
 platform=$(uname -o)
 # Load zsh-syntax-highlighting; should be last.
 if [ $platform = 'GNU/Linux' ]; then
-    export SYNTAX_HIGHLIGHT=/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    export SYNTAX_HIGHLIGHT=/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
     colorscript -r
 elif [ $platform = 'Android' ]; then
     export SYNTAX_HIGHLIGHT=~/apps/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
