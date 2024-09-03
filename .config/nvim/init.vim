@@ -17,18 +17,15 @@ call plug#end()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General Settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set incsearch                   " Incremental search
-set hidden                      " Needed to keep multiple buffers open
 set noswapfile                  " No swap
 set nobackup                    " No backup files
 set number relativenumber       " Display line numbers
 set clipboard=unnamedplus       " Copy/paste between vim and other programs.
 set showmatch
-set wildmenu
 set cursorline
 set cursorcolumn
 set scrolloff=1
-set sidescroll=5 "if for some reason wrap is off
+set lbr                         " for natural wrapping
 
 "When autocompleting, complete to the greatest common match
 set completeopt=longest,menuone

@@ -21,11 +21,8 @@ hunspell-en_gb
 hunspell-fr
 iwd
 keepassxc
+konsole
 libreoffice-fresh
-lightdm
-lightdm-gtk-greeter
-lightdm-gtk-greeter-settings
-light-locker
 linux
 man-db
 mpv
@@ -34,8 +31,8 @@ neovim
 octave
 pandoc
 papirus-icon-theme
+plasma
 pipewire
-redshift
 sudo
 sof-firmware
 tar
@@ -45,7 +42,6 @@ thunderbird
 udiskie
 which
 wget
-xfce4
 xorg
 zsh
 zsh-syntax-highlighting
