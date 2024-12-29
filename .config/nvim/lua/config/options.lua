@@ -9,11 +9,10 @@ vim.opt.clipboard = "unnamedplus"
 vim.opt.completeopt = {"longest", "menuone"}
 
 vim.opt.termguicolors = true
-vim.g.ayucolor = "dark"
-vim.cmd.colorscheme("ayu")
-vim.cmd.highlight("Comment guifg='LightMagenta'")
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+vim.cmd([[set nofoldenable]])
 
-vim.g.lightline = {colorscheme = "one"}
 vim.opt.laststatus = 2
 vim.opt.showmode = false
 vim.opt.mouse = "a"
@@ -24,5 +23,4 @@ vim.opt.tabstop = 4
 vim.opt.splitbelow = true
 vim.opt.splitright = true
 
-vim.g.python_highlight_all = 1
 vim.g.vim_markdown_math = 1
