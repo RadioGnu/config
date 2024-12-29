@@ -33,7 +33,7 @@ n ()
 #Aliases
 
 ##Config
-alias dot='/usr/bin/git --git-dir=$HOME/.cfg --work-tree=$HOME'
+alias dot='git --git-dir=$HOME/.cfg --work-tree=$HOME'
 ##General
 alias v='nvim'
 alias _='sudo'
@@ -71,6 +71,7 @@ setopt HIST_REDUCE_BLANKS  # remove unnecessary blanks
 setopt EXTENDED_HISTORY #record command start time
 
 #Completion settings
+setopt complete_aliases
 autoload -Uz compinit
 zstyle ':completion:*' menu select
 zmodload -i zsh/complist
@@ -86,7 +87,6 @@ export EDITOR="/usr/bin/nvim"
 export VISUAL="/usr/bin/nvim"
 export NNN_PLUG="D:dragdrop"
 export NNN_USE_EDITOR=1
-bindkey -v
 
 platform=$(uname -o)
 # Load zsh-syntax-highlighting; should be last.
