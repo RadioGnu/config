@@ -55,11 +55,6 @@ alias gps='git push'
 alias gst='git status'
 alias gpl='git pull --rebase'
 
-## confirm before overwriting something
-alias cp="cp -vi"
-alias mv='mv -vi'
-alias rm='rm -vI'
-
 # History in cache directory
 HISTSIZE=10000000
 SAVEHIST=10000000
