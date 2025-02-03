@@ -82,6 +82,7 @@ export EDITOR="/usr/bin/nvim"
 export VISUAL="/usr/bin/nvim"
 export NNN_PLUG="D:dragdrop"
 export NNN_USE_EDITOR=1
+export PATH=~/.local/bin:$PATH
 
 platform=$(uname -o)
 # Load zsh-syntax-highlighting; should be last.
