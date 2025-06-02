@@ -24,6 +24,7 @@ keepassxc
 konsole
 libreoffice-fresh
 linux
+lutris
 man-db
 mpv
 musescore
@@ -34,6 +35,7 @@ papirus-icon-theme
 pipewire
 plasma
 sof-firmware
+steam
 sudo
 tar
 terminus-font
