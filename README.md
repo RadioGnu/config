@@ -18,20 +18,6 @@ config config status.showUntrackedFiles no
 
 Afterwards it's just like the regular git command.
 
-
-### Vim-Plug (for Nvim)
-```sh
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-nvim +PlugInstall +qall
-```
-
-### Vim-Plug (for Vim)
-```sh
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-```
-
 ### syntax-highlighting
 ```sh
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
